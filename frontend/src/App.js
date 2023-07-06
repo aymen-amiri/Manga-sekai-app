@@ -87,13 +87,13 @@ function App() {
       <Navbar.Brand>
         <div className="logo-container">
           <img src="/images/logosekai.png" alt="Logo" className="logo" width={140} />
-          <SearchBox />
         </div>
       </Navbar.Brand>
     </LinkContainer>
 
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav" className="justify-content-between">
+    <SearchBox />
       <Nav className="w-100 justify-content-end">
 
         <Link to="/cart" className="nav-link">
@@ -171,11 +171,14 @@ function App() {
               <strong>Categories</strong>
             </Nav.Item>
             {categories.map((category) => (
+              
               <Nav.Item key={category}>
+              
                 <LinkContainer
                   to={{ pathname: '/search', search: `category=${category}` }}
                   onClick={() => setSidebarIsOpen(false)}
-                >
+                >          
+
                   <Nav.Link>{category}</Nav.Link>
                 </LinkContainer>
               </Nav.Item>

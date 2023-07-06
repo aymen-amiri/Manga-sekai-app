@@ -141,15 +141,30 @@ button.thumbnail {
 .logo-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; 
+   margin-right: 23rem; 
+
 }
 
-.logo {
-  margin-right: 20rem; 
-}
+
 
 @media (max-width: 991.98px) {
   .navbar-collapse {
     flex-direction: column;
   }
+}
+@media (max-width: 575.98px) {
+  .site-container {
+    padding: 1rem;
+  }
+
+  .logo {
+    margin-right: 1rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+}
+
+@media (min-width: 992px) {
 }
